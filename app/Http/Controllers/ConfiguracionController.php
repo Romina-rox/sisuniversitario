@@ -9,7 +9,7 @@ use Symfony\Contracts\Service\Attribute\Required;
 class ConfiguracionController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * INDEX 
      */
     public function index()
     {
@@ -18,7 +18,7 @@ class ConfiguracionController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * CREAR
      */
     public function create()
     {
@@ -26,7 +26,7 @@ class ConfiguracionController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * STORE
      */
     public function store(Request $request)
 {
@@ -86,7 +86,7 @@ class ConfiguracionController extends Controller
 
 
     /**
-     * Display the specified resource.
+     * SHOW
      */
     public function show(Configuracion $configuracion)
     {
@@ -94,7 +94,7 @@ class ConfiguracionController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * EDITAR
      */
     public function edit(Configuracion $configuracion)
     {
@@ -102,7 +102,7 @@ class ConfiguracionController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * UPDATE-ACTUALIZAR
      */
     public function update(Request $request, Configuracion $configuracion)
     {
@@ -110,7 +110,7 @@ class ConfiguracionController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * DESTROY
      */
     public function destroy(Configuracion $configuracion)
     {

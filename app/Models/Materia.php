@@ -9,9 +9,9 @@ class Materia extends Model
 {
     use HasFactory;
 
-    protected $table = 'materias';
+    protected $table = 'materias';//nombre de la base de datos 
 
-    protected $fillable = [
+    protected $fillable = [//datos que quiero en la base de datos
         'carrera_id',
         'nombre',
         'codigo',

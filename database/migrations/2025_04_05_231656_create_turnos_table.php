@@ -7,24 +7,22 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * CORREN LAS MIGRACIONES CON EL php artisan migrate
+     * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('gestions', function (Blueprint $table) {
+        Schema::create('turnos', function (Blueprint $table) {
             $table->id();
-
-            $table-> string('nombre');
-            
+            $table->String('nombre');
             $table->timestamps();
         });
     }
 
     /**
-     * DE DONDE MIGRA
+     * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('gestions');
+        Schema::dropIfExists('turnos');
     }
 };

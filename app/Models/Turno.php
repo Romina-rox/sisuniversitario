@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gestion extends Model
+class Turno extends Model
 {
     use HasFactory;
 
-    protected $table = 'gestions';//nombre de la base de datos 
+    protected $table='turnos';//nombre de la base de datos de migrate
 
-    protected $fillable = [//los datos que deseo que se muestren en la base de datos
+    protected $fillable = [//datos que quiero en la base de datos
         'nombre',
     ];
+
 }

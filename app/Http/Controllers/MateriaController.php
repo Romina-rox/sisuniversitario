@@ -8,33 +8,20 @@ use Illuminate\Http\Request;
 
 class MateriaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $materias = Materia::all();
         return view('admin.materias.index', compact('materias'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    /*public function create()
-    {
-        return view('admin.materias.create');
-    }*/
+
 
     public function create()
     {
-        $carreras = Carrera::all(); 
-        return view('admin.materias.create', compact('carreras'));
+        $carreras = Carrera::all(); //OBTENGO DE LA TABLA MATERIA SELECT * FROM CARRERA 
+        return view('admin.materias.create', compact('carreras'));//MANDA COMO VARIABLE A LA VISTA Y LA VISTA LO RECIBE 
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([

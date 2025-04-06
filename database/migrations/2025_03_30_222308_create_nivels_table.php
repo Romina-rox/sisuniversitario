@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('nivels', function (Blueprint $table) {
             $table->id();
 
-            $table-> string('nombre');
+            $table-> string('nombre');//EN ESTE CASO SOLAMENTE ES NOMBRE
 
             $table->timestamps();
         });

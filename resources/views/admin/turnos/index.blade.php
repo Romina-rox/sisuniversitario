@@ -1,8 +1,8 @@
 @extends('adminlte::page')
 
 @section('content_header')
-    <h1> <b>Listado de Materias Academicas</b> </h1>
-    <br>
+    <h1><b>Listado de Turnos </b></h1>
+    <hr>
 @stop
 
 @section('content')
@@ -10,10 +10,10 @@
         <div class="col-md-8">
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Materias registradas</h3>
+                    <h3 class="card-title">Turnos registrados</h3>
 
                     <div class="card-tools">
-                        <a href="{{url('/admin/materias/create')}}" class="btn btn-primary"> Crear nuevo</a>
+                        <a href="{{url('/admin/turnos/create')}}" class="btn btn-primary"> Crear nuevo</a>
                     </div>
                     <!-- /.card-tools -->
                 </div>
@@ -23,9 +23,7 @@
                         <thead>
                         <tr>
                             <th style="text-align: center">Nro</th>
-                            <th style="text-align: center">carrera</th>
-                            <th style="text-align: center">Nombre de la materia</th>
-                            <th style="text-align: center">Codigo</th>
+                            <th style="text-align: center">Nombre del turno</th>
                             <th style="text-align: center">Acción</th>
                         </tr>
                         </thead>
@@ -33,25 +31,21 @@
                         @php
                             $contador = 1;
                         @endphp
-                        @foreach($materias as $materia)<!-- de donde stoy sacando las variables -->
+                        @foreach($turnos as $turno)
                             <tr>
                                 <td style="text-align: center">{{$contador++}}</td>
-                                <td>{{$materia->carrera->nombre}}</td>
-                                <td>{{$materia->nombre}}</td>
-                                <td>{{$materia->codigo}}</td>
-                                
-                                <!-- paso aca los campos -->
+                                <td>{{$turno->nombre}}</td>
                                 <td style="text-align: center">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <a href="{{url('/admin/materias/'.$materia->id.'/edit')}}" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                                        <form action="{{url('/admin/materias',$materia->id)}}" method="post"
-                                              onclick="preguntar{{$materia->id}}(event)" id="miFormulario{{$materia->id}}">
+                                        <a href="{{url('/admin/turnos/'.$turno->id.'/edit')}}" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                                        <form action="{{url('/admin/turnos',$turno->id)}}" method="post"
+                                              onclick="preguntar{{$turno->id}}(event)" id="miFormulario{{$turno->id}}">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
                                         </form>
                                         <script>
-                                            function preguntar{{$materia->id}}(event) {
+                                            function preguntar{{$turno->id}}(event) {
                                                 event.preventDefault();
                                                 Swal.fire({
                                                     title: '¿Desea eliminar esta registro?',
@@ -64,7 +58,7 @@
                                                     denyButtonText: 'Cancelar',
                                                 }).then((result) => {
                                                     if (result.isConfirmed) {
-                                                        var form = $('#miFormulario{{$materia->id}}');
+                                                        var form = $('#miFormulario{{$turno->id}}');
                                                         form.submit();
                                                     }
                                                 });
@@ -86,7 +80,7 @@
 
 @section('css')
     <style>
-        /* Fondo transparente y sin borde en el contenedor EN CSS */
+        /* Fondo transparente y sin borde en el contenedor */
         #example1_wrapper .dt-buttons {
             background-color: transparent;
             box-shadow: none;
@@ -121,10 +115,10 @@
                 "pageLength": 5,
                 "language": {
                     "emptyTable": "No hay información",
-                    "info": "Mostrando _START_ a _END_ de _TOTAL_ Materias",
-                    "infoEmpty": "Mostrando 0 a 0 de 0 materias",
-                    "infoFiltered": "(Filtrado de _MAX_ total Materias)",
-                    "lengthMenu": "Mostrar _MENU_ Materias",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ Turnos",
+                    "infoEmpty": "Mostrando 0 a 0 de 0 Turnos",
+                    "infoFiltered": "(Filtrado de _MAX_ total Turnos)",
+                    "lengthMenu": "Mostrar _MENU_ Turnos",
                     "loadingRecords": "Cargando...",
                     "processing": "Procesando...",
                     "search": "Buscador:",
@@ -139,7 +133,7 @@
                 "responsive": true,
                 "lengthChange": true,
                 "autoWidth": false,
-                buttons: [//ESTO ES PARA QUE ME IMPORTE O DESCRGUE EN EL ARCHIVO QUE YO DESEO
+                buttons: [
                     { text: '<i class="fas fa-copy"></i> COPIAR', extend: 'copy', className: 'btn btn-default' },
                     { text: '<i class="fas fa-file-pdf"></i> PDF', extend: 'pdf', className: 'btn btn-danger' },
                     { text: '<i class="fas fa-file-csv"></i> CSV', extend: 'csv', className: 'btn btn-info' },

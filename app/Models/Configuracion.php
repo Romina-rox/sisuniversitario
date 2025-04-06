@@ -11,7 +11,7 @@ class Configuracion extends Model
 
     protected $table = 'configuracions';//Nombre de la tabla en la BD
 
-    protected $fillable = [
+    protected $fillable = [//lo que deseo que vaya en la base de datos para migrar
         'nombre',
         'descripcion',
         'direccion',

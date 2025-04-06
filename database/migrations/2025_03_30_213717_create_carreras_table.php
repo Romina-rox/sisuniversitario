@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * QUE CORRA LOS DATOS QUE SE DEBEN DE MIGRAR
      */
     public function up(): void
     {
@@ -21,7 +21,7 @@ return new class extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * DE DONDE SE MIGRA LOS DATOS 
      */
     public function down(): void
     {

@@ -13,10 +13,12 @@
                     <h3 class="card-title">Lleno los datos del formulario</h3>
                     <!-- /.card-tools -->
                 </div>
-                <!-- /.card-header -->
+                <!-- CABECERO -->
                 <div class="card-body">
+                    <!-- CREACION DEL FORMULARIO -->
                     <form action="{{url('admin/materias/create')}}" method="post">
                         @csrf
+                        <!-- NOMBRE DE LA CARRERA -->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -40,6 +42,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- NOMBRE DE LA MATERIA  -->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -56,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--      --->
+                        <!--  NOMBRE DEL CODIGO DE LA MATERIA     --->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -73,7 +76,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- BOTONES DE CANCELAR O REGISTRAR -->
                         <hr>
                         <div class="row">
                             <div class="col-md-12">

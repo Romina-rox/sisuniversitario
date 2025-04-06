@@ -3,15 +3,7 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
-    | Title
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the default title of your admin panel.
-    |
-    | For detailed instructions you can look the title section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
+   titulo de mi sistema
     */
 
     'title' => 'Sistema de Gestión Universitaria',
@@ -52,18 +44,10 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
-    | Admin Panel Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the logo of your admin panel.
-    |
-    | For detailed instructions you can look the logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
+   cambio del logo de Admin lte
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Rox</b>ANA',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -71,15 +55,7 @@ return [
     'logo_img_alt' => 'Admin Logo',
 
     /*
-    |--------------------------------------------------------------------------
-    | Authentication Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can setup an alternative logo to use on your login and register
-    | screens. When disabled, the admin panel logo will be used instead.
-    |
-    | For detailed instructions you can look the auth logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
+imagen del logo
     |
     */
 
@@ -330,6 +306,12 @@ return [
             'text' => 'Niveles',
             'url' => 'admin/niveles',
             'icon' => 'fas fa-fw fa-layer-group',
+            'classes' => 'bg-blue text-white',
+        ],
+        [
+            'text' => 'Turnos',
+            'url' => 'admin/turnos',
+            'icon' => 'fas fa-fw fa-clock',
             'classes' => 'bg-blue text-white',
         ],
         [

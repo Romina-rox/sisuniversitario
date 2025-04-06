@@ -52,6 +52,17 @@
             </div>       
           </div>
 
+          <!-- PARALELOS -->
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+              <img src="{{ url('/img/carpetas.gif') }}" width="70px" alt="">
+              <div class="info-box-content">
+                <span class="info-box-text"><b>Paralelos registrados</b></span>
+                <span class="info-box-number">{{ $total_paralelos }} paralelos</span>
+              </div>
+            </div>       
+          </div>
+
           <!-- MATERIAS -->
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">

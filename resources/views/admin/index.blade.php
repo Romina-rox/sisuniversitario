@@ -63,6 +63,17 @@
             </div>       
           </div>
 
+          <!-- PERIODOS -->
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+              <img src="{{ url('/img/completar.gif') }}" width="70px" alt="">
+              <div class="info-box-content">
+                <span class="info-box-text"><b>Periodos registrados</b></span>
+                <span class="info-box-number">{{ $total_periodos }} periodo</span>
+              </div>
+            </div>       
+          </div>
+
           <!-- MATERIAS -->
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">

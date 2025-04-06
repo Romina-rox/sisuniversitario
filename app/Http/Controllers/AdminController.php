@@ -7,6 +7,7 @@ use App\Models\Gestion;
 use App\Models\Nivel;
 use App\Models\Turno;
 use App\Models\Paralelo;
+use App\Models\Periodo;
 use App\Models\Materia;
 
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class AdminController extends Controller
         $total_carreras = Carrera::count();
         $total_niveles = Nivel::count(); 
         $total_turnos = Turno::count();  
-        $total_paralelos = Paralelo::count();  
+        $total_paralelos = Paralelo::count(); 
+        $total_periodos = Periodo::count();  
 
         $total_materias = Materia::count(); 
       
@@ -29,6 +31,7 @@ class AdminController extends Controller
                                           'total_niveles',
                                           'total_turnos',
                                           'total_paralelos',
+                                          'total_periodos',
                                           'total_materias'));
     }
 }

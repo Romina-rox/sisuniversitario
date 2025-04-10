@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Administrativo;
 use App\Models\Carrera;
 use App\Models\Gestion;
 use App\Models\Nivel;
@@ -9,6 +10,10 @@ use App\Models\Turno;
 use App\Models\Paralelo;
 use App\Models\Periodo;
 use App\Models\Materia;
+//use App\Models\Role;      esto no aqui sino abajo no olvidar 
+
+
+use Spatie\Permission\Models\Role;
 
 use Illuminate\Http\Request;
 
@@ -24,6 +29,8 @@ class AdminController extends Controller
         $total_periodos = Periodo::count();  
 
         $total_materias = Materia::count(); 
+        $total_roles = Role::count(); 
+        $total_administrativos = Administrativo::count(); 
       
         //dd($total_paralelos);
         return view('admin.index',compact('total_gestiones',
@@ -32,6 +39,8 @@ class AdminController extends Controller
                                           'total_turnos',
                                           'total_paralelos',
                                           'total_periodos',
-                                          'total_materias'));
+                                          'total_materias',
+                                          'total_roles',
+                                          'total_administrativos'));
     }
 }

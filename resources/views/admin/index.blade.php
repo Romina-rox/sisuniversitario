@@ -10,7 +10,7 @@
 
       <!-- GESTIONES -->
         <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/calendario.gif') }}" width="70px" alt="">
               <div class="info-box-content">
                 <span class="info-box-text"><b>Gestiones registrados</b></span>
@@ -21,7 +21,7 @@
 
           <!-- CARRERAS -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/diploma.gif') }}" width="70px" alt="">
               <div class="info-box-content">
                 <span class="info-box-text"><b>Carreras registradas</b></span>
@@ -32,7 +32,7 @@
 
           <!-- NIVELES -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/grafico-de-linea.gif') }}" width="70px" alt="">
               <div class="info-box-content">
                 <span class="info-box-text"><b>Niveles registrados</b></span>
@@ -43,7 +43,7 @@
 
           <!-- TURNOS -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/reloj.gif') }}" width="70px" alt="">
               <div class="info-box-content">
                 <span class="info-box-text"><b>Turnos registrados</b></span>
@@ -54,7 +54,7 @@
 
           <!-- PARALELOS -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/carpetas.gif') }}" width="70px" alt="">
               <div class="info-box-content">
                 <span class="info-box-text"><b>Paralelos registrados</b></span>
@@ -65,7 +65,7 @@
 
           <!-- PERIODOS -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/completar.gif') }}" width="70px" alt="">
               <div class="info-box-content">
                 <span class="info-box-text"><b>Periodos registrados</b></span>
@@ -76,11 +76,33 @@
 
           <!-- MATERIAS -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
+            <div class="info-box zoomP">
               <img src="{{ url('/img/materias.gif') }}" width="70px" alt="">
               <div class="info-box-content">
-                <span class="info-box-text"><b>Materias ROXANA registrados</b></span>
+                <span class="info-box-text"><b>Materias  registrados</b></span>
                 <span class="info-box-number">{{ $total_materias }} materias</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLES-->
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box zoomP">
+              <img src="{{ url('/img/roles.gif') }}" width="70px" alt="">
+              <div class="info-box-content">
+                <span class="info-box-text"><b>roles registrados</b></span>
+                <span class="info-box-number">{{ $total_roles }} roles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADMINISTRATIVOS  -->
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box zoomP">
+              <img src="{{ url('/img/administrativos.gif') }}" width="70px" alt="">
+              <div class="info-box-content">
+                <span class="info-box-text"><b>Admiistrativos registrados</b></span>
+                <span class="info-box-number">{{ $total_administrativos }} materias</span>
               </div>
             </div>
           </div>

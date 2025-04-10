@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Administrativo;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
-use App\Models\User; // Importa el modelo User (asumiendo que está en App\Models)
+use App\Models\User; // Importa el modelo User ( que está en App\Models)
 use Illuminate\Support\Facades\Hash; // Importa la fachada Hash para el hashing de contraseñas
 
 class AdministrativoController extends Controller
